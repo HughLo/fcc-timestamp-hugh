@@ -15,6 +15,8 @@ app.get('/:dateString', function(req, res) {
 app.get('/', function(req, res) {
    res.end('home page does nothing'); 
 });
-app.listen(8080, function() {
-    console.log("start server at port 8080 of address " + app.address);
+
+var port = process.env.PROT || 8080;
+app.listen(port, function() {
+    console.log("start server at address " + app.address + " at port " + port);
 });
