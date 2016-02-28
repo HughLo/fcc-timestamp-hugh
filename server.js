@@ -17,7 +17,7 @@ app.get('/', function(req, res) {
 });
 
 console.log("process.env.PORT: " + process.env.PORT);
-var port = process.env.PROT || 8080;
+var port = process.env.PORT || 8080;
 app.listen(port, function() {
     console.log("start server at address " + app.address + " at port " + port);
 });
